@@ -46,20 +46,14 @@ LastUpdatedAt: Date.new(2018, 11, 22)
 
 ### 使用経験ミドルウェア
 
-- WEBサーバー
-  - Nginx,Apache
-    - 設定見て適切なチューニングできます
-- キャッシュサーバー
-  - Memcache,Redis
-    - 設定見て適切なチューニングできます
-- DB
-  - MySQL(AWS RDS For MySQL),Oracle,PostgreSQL
-    - 設定見て適度なチューニングできます(MySQLのみ)
+- WEBサーバー (Nginx,Apache)
+  - 設定見て適切なチューニングできます
 
-- ロードバランサー
-  - haProxy(開発で擬似ロードバランサーとかで), AWS ELB(Classic, ApplicationLoadBalancer)
+- キャッシュサーバー (Memcache,Redis)
+  - 設定見て適切なチューニングできます
 
-
+- DB (MySQL[AWS RDS For MySQL], Oracle, PostgreSQL)
+  - 設定見て適度なチューニングできます(MySQLのみ)
 
 ### 使用経験クラウドサービス
 
@@ -77,14 +71,10 @@ LastUpdatedAt: Date.new(2018, 11, 22)
   - Ansibleから乗り換えました。小規模なら破棄が魅力的ですよね
 - Lambda ([Serverless FrameWork](https://serverless.com/) で管理します)
   - APIGateWay経由, CloudWatchAlarm, CloudWatchEventのHook起動とかで
-- S3
+- S3, Route53, SecretManager
   - 普通に
-- Route53
-  - DNSレコード設定とかメールサーバー設定とか
 - CloudFront
   - S3の設定から画像CDN配信で使用
-- SecretManager
-  - Lambdaの気密情報の管理で
 - SystemManager
   - Lambdaから各サーバーのtopのログをSystemManager経由で取得したり
 - DynamoDB
@@ -92,14 +82,12 @@ LastUpdatedAt: Date.new(2018, 11, 22)
 - SQS
   - メールキューとして使用
 
-
-
 ### GCP
 
 - BigQuery
   - 分析基盤のストレージ
-
-
+- Apis
+  - Analytics, DFP, SearchConsole
 
 ### 使用経験サードパーティツール
 
@@ -115,14 +103,10 @@ LastUpdatedAt: Date.new(2018, 11, 22)
   - 導入してグラフやダッシュボードの活用など
 - [Serverless](https://serverless.com/)
   - AWS Lambda用に
-- GoogleAPIs
-  - Analytics,SearchConsole,DFP等解析用に
 - [Fluentd](https://www.fluentd.org/)
   - クリックカウントシステムの集計として導入経験あり 
 - AWS CLI
   - なれたらGUI操作は辞めましょう
-
-
 
 ### その他
 
